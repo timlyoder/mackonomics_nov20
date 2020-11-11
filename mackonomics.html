@@ -23,6 +23,89 @@
 
 	<script type="text/javascript" src="https://www.macktrucks.com/js/jquery-1.8.3.min.js"></script>
 
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	<script>
+
+		$( function() {
+
+			// calculate
+
+			function formatNumberCommas(num) {
+				// add commas to long numbers
+				return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+			}
+
+			function currencyFormat(num) {
+				// format numbers to two decimal places
+				return num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+			}
+
+			function slideChange( event=null, ui=null ) {
+
+				// when a slider is changed
+				// console.log("slideChange()");
+
+				// get slider values
+				const trucks = $("#trucks_slider").slider( "value" );
+				const miles = $("#miles_slider").slider( "value" );
+				const cost = $("#cost_slider").slider( "value" );
+				const years = $("input[name='years']:checked").val();
+
+				// compute savings
+				const savings = Math.round( trucks * miles * cost * years * .13);
+
+				// update values
+				$("#trucks_slider_value").html(trucks);
+				$("#trucks_slider_plural").html( (trucks > 1) ? "s" : "" );
+				$("#miles_slider_value").html(formatNumberCommas(miles));
+				$("#cost_slider_value").html(currencyFormat(cost));
+				$("#savings_value").html(formatNumberCommas(savings));
+				$("#savings_years").html(years);
+				$("#savings_years_plural").html( (years > 1) ? "s" : "" );
+
+			}
+
+			// init sliders
+
+			$( "#trucks_slider" ).slider({
+				min: 1,
+				max: 10,
+				value: 1,
+				slide: slideChange
+			});
+
+			$( "#miles_slider" ).slider({
+				min: 10000,
+				max: 500000,
+				step: 10000,
+				value: 100000,
+				slide: slideChange
+			});
+
+			$( "#cost_slider" ).slider({
+				min: 1,
+				max: 5,
+				step: .01,
+				value: 2.54,
+				slide: slideChange
+			});
+
+			// radio button listener
+			$("#calculate input").click( slideChange );
+
+			// init values
+			slideChange();
+
+		});
+
+	</script>
+	  
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
 	<style>
 
 		/* Fonts */
@@ -300,6 +383,14 @@
 			margin-bottom: 74px;
 		}
 
+		#calculate {
+			color: #FFF;
+		}
+
+		#calculate .slider {
+			margin: 50px;
+		}
+
 	</style>
 
 </head>
@@ -431,6 +522,37 @@
 			</div>
 
 			
+			<div id="calculate">
+
+
+				<p>Select your fleet size.</p>
+				<p><span id="trucks_slider_value">1</span> truck<span id="trucks_slider_plural"></span></p>
+
+				<div class="slider" id="trucks_slider"></div>
+
+				<p>Select your average miles per year per truck.</p>
+				<p><span id="miles_slider_value"></span> miles</p>
+
+				<div class="slider" id="miles_slider"></div>
+
+				<p>Select your average fuel cost per gallon.</p>
+				<p>$<span id="cost_slider_value"></span></p>
+
+				<div class="slider" id="cost_slider"></div>
+
+				<fieldset>
+					<label for="year-1">Year 1</label>
+					<input type="radio" name="years" id="year-1" value="1" />
+					<label for="year-3">Year 3</label>
+					<input type="radio" name="years" id="year-3" value="3" checked />
+					<label for="year-5">Year 5</label>
+					<input type="radio" name="years" id="year-5" value="5" />
+				</fieldset>
+				  
+				<p>$<span id="savings_value"></span></p>
+				<p>Savings over <span id="savings_years"></span> year<span id="savings_years_plural"></span></p>
+
+			</div>
 
 			
 		
