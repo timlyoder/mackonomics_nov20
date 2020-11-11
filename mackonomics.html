@@ -402,31 +402,6 @@
 			margin: 50px;
 		}
 
-		.sidebar.show {
-			transform: translateX(0);
-		}
-
-		.sidebar {
-			width: 50vw;
-			position: fixed;
-			top: 0;
-			height: 100vh;
-			right: 0;
-			background: #000;
-			z-index: 999;
-			transition: all .3s ease-in;
-			transform: translateX(100%);
-			overflow: hidden;
-			color: #fff;
-			overflow-y: scroll!important;
-		}
-
-		@media (max-width: 768px) {
-			.sidebar {
-				width: 100vw;
-			}
-		}
-
 		.overlay {
 			width: 100%;
 			height: 100%;
@@ -444,6 +419,34 @@
 			visibility: visible;
 			z-index: 1;
 			opacity:.7
+		}
+
+
+		.sidebar.show {
+			transform: translateX(0);
+		}
+
+		.sidebar {
+			width: 100vw;
+			position: fixed;
+			top: 0;
+			height: 100vh;
+			right: 0;
+			background: #000;
+			z-index: 999;
+			transition: all .3s ease-in;
+			transform: translateX(100%);
+			overflow: hidden;
+			color: #fff;
+			overflow-y: scroll!important;
+		}
+
+		.sidebar-content {
+			margin: 0 auto;
+			max-width: 480px;
+			width: 100%;
+			padding: 60px 5%;
+			overflow: visible;
 		}
 
 		.sidebar .close {
@@ -479,31 +482,15 @@
 			top: 0;
 			transform:rotate(-45deg)
 		}
-		
-		.sidebar-content {
-			margin: 0 auto;
-			max-width: 480px;
-			width: 100%;
-			padding: 140px 10px 50px;
-			overflow:visible
-		}
-
-		@media (max-width: 768px) {
-			.sidebar-content {
-				padding: 60px 5%;
-				width:90%
-			}
-		}
 
 		.sidebar-content-form {
 			border-top: 2px solid #fff;
 		}
 
 		.sidebar-content-form h4 {
-			font-family: "Helvetica Neue 65 Medium", "Helvetica", "Arial", sans-serif;
 			font-size: 25px;
 			line-height: 1;
-			padding-top: 20px;
+			padding: 20px 0;
 		}
 
 		.sidebar .form-element-layout>div {
@@ -513,13 +500,106 @@
 
 		.sidebar .form-element-layout>div:first-child {
 			width: 30%;
+			padding-right: 10px;
 		}
 
+		.sidebar #formElement8>div:first-child, .sidebar #formElement9>div:first-child {
+			width: 100%;
+			padding-right: 0;
+		}
 
 		.LV_validation_message {
 			display: block;
 		}
+
+		.sidebar .elq-form .container-fluid, .sidebar .elq-form .layout-col, .sidebar .elq-form .col-xs-12 {
+			padding: 0;
+		}
+
+		.sidebar .elq-form .row {
+			width: 100%;
+			margin: 0;
+		}
+
+		.sidebar-content-form form input[type=text], .sidebar-content-form form select {
+			-webkit-appearance: none;
+			padding: 4px;
+			padding-left: 8px;
+			-moz-appearance: none;
+			color: #fff;
+			background: #2c2c2c;
+			border: 1px solid #555;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+
+		.sidebar-content-form form input[type=text] {
+			max-width: 400px;
+			font-size: 16px;
+			text-indent: 5px;
+		}
+
+		.sidebar .elq-form .elq-label, .sidebar .elq-form label.checkbox-aligned {
+			/* width: 97px; */
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 24px;
+			color: #a2a2a2;
+			line-height: 1.3;
+		}
+
+		.sidebar .LV_invalid {
+			color: #c00;
+			font-size: 10px;
+			display: block;
+			margin-top: 10px;
+		}
+
+		.sidebar .elq-form .elq-required {
+			display: none;
+		}
 		
+		.sidebar .sidebar-content-form form input[type=checkbox] {
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			background: #000;
+			border: 2px solid #9e9e9e;
+			box-sizing: border-box;
+			height: 17px;
+			width: 17px;
+		}
+
+		.sidebar-content-form form .submit-button-style {
+			background: #b8252f;
+			border: 3px solid #b8252f;
+			color: #fff;
+			font-weight: 750;
+			font-size: 14px;
+			line-height: 24px;
+			text-align: center;
+			width: 100%;
+			padding: 8px 0;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+
+		@media (min-width: 769px) {
+
+			.sidebar {
+				width: 50vw;
+			}
+
+			.sidebar-content {
+				padding: 100px 10px 50px;
+			}
+
+			.sidebar #formElement8>div:first-child, .sidebar #formElement9>div:first-child {
+				width: 70%;
+				margin-left: 30%;
+			}
+
+		}
+
 	</style>
 
 </head>
@@ -698,7 +778,7 @@
 
 			<div class="sidebar-content-form">
 
-				<h4>Connect with a Mack dealer for a breakdown of your fuel savings.</h4>
+				<h4 class="heavy">Connect with a Mack dealer for a breakdown of your fuel savings.</h4>
 
 				<!-- Start Eloqua Form Code -->
 
