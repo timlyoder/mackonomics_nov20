@@ -98,6 +98,17 @@
 			// init values
 			slideChange();
 
+
+			// sidebar
+
+			// on button click
+			$(".modal-button, .overlay, .sidebar .close").on("click", function() {
+				// show sidebar and overlay
+				$(".sidebar").toggleClass("show");
+				$("body").toggleClass("modal");
+            	$(".overlay").toggleClass("show");
+			});
+
 		});
 
 	</script>
@@ -416,6 +427,59 @@
 			}
 		}
 
+		.overlay {
+			width: 100%;
+			height: 100%;
+			background: #000;
+			opacity: 0;
+			position: fixed;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			transition: opacity .25s ease-in;
+			visibility:hidden
+		}
+
+		.overlay.show {
+			visibility: visible;
+			z-index: 1;
+			opacity:.7
+		}
+
+		.sidebar .close {
+			position: absolute;
+			color: #fff;
+			top: 40px;
+			right: 40px;
+			height: 20px;
+			width: 20px;
+			cursor: pointer;
+			display:block
+		}
+
+		.sidebar .close:after, .sidebar .close:before {
+			content: "";
+			display: block;
+			width: 24px;
+			cursor: pointer;
+			height: 2px;
+			transition: all .2s ease-in;
+			background-color: #fff;
+			position: absolute;
+			left: 0;
+			top:8px
+		}
+
+		.sidebar .close:before {
+			top: 0;
+			transform:rotate(45deg)
+		}
+
+		.sidebar .close:after {
+			top: 0;
+			transform:rotate(-45deg)
+		}
+		
 	</style>
 
 </head>
@@ -437,7 +501,7 @@
 
 			<div id="quote_cta">
 
-				<button>
+				<button class="modal-button">
 					Get a Quote
 				</button>
 
@@ -2144,6 +2208,8 @@
 			</div>
 		</div>
 	</div> <!-- /sidebar -->
+
+	<div class="overlay"></div>
 
 </body>
 
