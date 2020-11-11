@@ -480,6 +480,46 @@
 			transform:rotate(-45deg)
 		}
 		
+		.sidebar-content {
+			margin: 0 auto;
+			max-width: 480px;
+			width: 100%;
+			padding: 140px 10px 50px;
+			overflow:visible
+		}
+
+		@media (max-width: 768px) {
+			.sidebar-content {
+				padding: 60px 5%;
+				width:90%
+			}
+		}
+
+		.sidebar-content-form {
+			border-top: 2px solid #fff;
+		}
+
+		.sidebar-content-form h4 {
+			font-family: "Helvetica Neue 65 Medium", "Helvetica", "Arial", sans-serif;
+			font-size: 25px;
+			line-height: 1;
+			padding-top: 20px;
+		}
+
+		.sidebar .form-element-layout>div {
+			display: flex;
+			width: 70%;
+		}
+
+		.sidebar .form-element-layout>div:first-child {
+			width: 30%;
+		}
+
+
+		.LV_validation_message {
+			display: block;
+		}
+		
 	</style>
 
 </head>
@@ -656,13 +696,9 @@
 		
 		<div class="sidebar-content">
 
-			<div class="sidebar-content-header">
-				<div class="sidebar-content-header-title"></div>
-				<div class="sidebar-content-header-date"></div>
-			</div>
-
 			<div class="sidebar-content-form">
-				<h4>Fill out the form below to connect with your local Mack Financial Services Specialist.</h4>
+
+				<h4>Connect with a Mack dealer for a breakdown of your fuel savings.</h4>
 
 				<!-- Start Eloqua Form Code -->
 
