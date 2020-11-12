@@ -204,8 +204,12 @@
 			font-family: "Helvetica Neue 55 Regular", "Helvetica", "Arial", sans-serif;
 		}
 
-		.heavy, button {
+		.heavy, button, a.button {
 			font-family: "Helvetica Neue 65 Medium", "Helvetica", "Arial", sans-serif;
+		}
+
+		a.button {
+			text-decoration: none;
 		}
 
 		#hero {
@@ -569,7 +573,6 @@
 
 		.ui-slider-handle, .ui-state-default {
 			border: none;
-		
 		}
 
 		.ui-slider-horizontal {
@@ -588,9 +591,8 @@
 
 		#savings_over {
 			font-size: 12px;
-			float: right;
+			display: inline-block;
 			padding-left: 10px;
-			padding-right: 40px;
 			padding-top: 40px;
 		}
 
@@ -645,10 +647,6 @@
 		#privacy {
 			padding-left: 120px;
 		}
-
-		
-
-		
 
 		.overlay {
 			width: 100%;
@@ -839,6 +837,24 @@
 			display: none;
 		}
 
+		input[type="radio"] {
+			display: none;
+		} 
+
+		input[type="radio"]:checked+label{
+			color: #FFF;
+		} 
+
+		input[type="radio"]+label::before{
+			content: "•";
+			margin-right: 5px;
+			visibility: hidden;
+		}
+
+		input[type="radio"]:checked+label::before{
+			visibility: visible;
+		} 
+
 		@media (min-width: 769px) {
 
 			.sidebar {
@@ -902,9 +918,9 @@
 
 			<div id="calculate_cta">
 
-				<button class="gold_button">
+				<a class="gold_button button" href="#calculate">
 					Calculate Savings
-				</button>
+				</a>
 
 				<img src="gold_arrow.png" alt="" />
 			
@@ -912,16 +928,8 @@
 
 			<div id="efficiency">
 
-				
-				
-				
 				<span id="efficiency_span" class="section_title">EFFICIENCY MEETS PROFICIENCY</span>
 
-
-				
-				
-				
-				
 				<div id="fuel_savings">
 
 					<h1 class="efficiency_stat" id="efficiency_h1">11+</h1>
@@ -950,11 +958,6 @@
 
 					<span class="body_copy">Even at 900 RPM.</span>
 				</div>
-
-
-
-
-
 
 			</div>
 
@@ -1044,7 +1047,7 @@
 							
 							<h2>Drop your fuel costs by 13% with the Mack HE+ Package.*</h2>
 							
-							<img src="arrow_button.png" alt="">
+							<img src="arrow_button.png" alt="" />
 
 						</div>
 
@@ -1094,18 +1097,18 @@
 				<div class="slider" id="cost_slider"></div>
 
 				<fieldset>
-					<label for="year-1" class="calculate_p">Year 1</label>
 					<input type="radio" name="years" id="year-1" value="1" />
-					<label for="year-3" class="calculate_p">Year 3</label>
+					<label for="year-1" class="calculate_p">Year 1</label>
 					<input type="radio" name="years" id="year-3" value="3" checked />
-					<label for="year-5" class="calculate_p">Year 5</label>
+					<label for="year-3" class="calculate_p">Year 3</label>
 					<input type="radio" name="years" id="year-5" value="5" />
+					<label for="year-5" class="calculate_p">Year 5</label>
 				</fieldset>
 				  
 				<p id="savings">$ <span id="savings_value"></span></p>
 				<p id="savings_over">Savings over <br> <span id="savings_years"></span> year<span id="savings_years_plural"></span></p>
 
-				<button class="gold_button" id="dealer_button">Talk to a Dealer</button>
+				<button class="gold_button" id="dealer_button" class="modal-button">Talk to a Dealer</button>
 
 			</div>
 
@@ -1140,11 +1143,6 @@
 				<p class="fine_print" id="privacy">Privacy / Contact Us</p>
 			</div>
 
-
-		
-
-			
-		
 		</div>
 
 
