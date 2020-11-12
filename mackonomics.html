@@ -210,6 +210,8 @@
 
 		a.button {
 			text-decoration: none;
+			cursor: pointer;
+			display: inline-block;
 		}
 
 		#hero {
@@ -236,6 +238,7 @@
 			color: #fff;
 			padding: 16px 40px;
 			border: none;
+			margin: 0;
 		}
 
 		#introduction {
@@ -299,6 +302,11 @@
 			background-color: #000;
 			padding: 18px 38px;
 			border: 1px solid #B49867;
+		}
+
+		.gold_button:hover {
+			background-color: #B49867;
+			color: #000;
 		}
 
 		#calculate_cta img {
@@ -962,7 +970,7 @@
 					the Mack Anthem HE+ Package. Connect with him to see the results for yourself or follow #Mackonomics on your social channels.
 				</p>
 
-				<button class="gold_button" id="jamie_button">Follow Jamie</button>
+				<a class="gold_button button" id="jamie_button">Follow Jamie</a>
 
 				<div class="tweet">
 
@@ -1093,7 +1101,7 @@
 				<p id="savings">$ <span id="savings_value"></span></p>
 				<p id="savings_over">Savings over <br> <span id="savings_years"></span> year<span id="savings_years_plural"></span></p>
 
-				<button class="gold_button" id="dealer_button" class="modal-button">Talk to a Dealer</button>
+				<a class="gold_button button modal-button" id="dealer_button" class="modal-button">Talk to a Dealer</a>
 
 			</div>
 
