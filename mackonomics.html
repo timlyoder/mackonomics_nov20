@@ -404,6 +404,7 @@
 
 		#calculate {
 			color: #FFF;
+			padding-bottom: 40px;
 		}
 
 		#calculate .slider {
@@ -549,10 +550,87 @@
 			padding-top: 45px;
 		}
 
-		#calculate p {
+		.calculate_p {
 			padding-left: 8%;
 			padding-bottom: 15px;
+			font-size: 12px;
+			font-family: "Helvetica Neue 55 Regular", "Helvetica", "Arial", sans-serif;
+			line-height: 18px;
+			color: #8A8A8A;
 		}
+
+		#trucks_slider_value, #miles_slider_value {
+			font-size: 20px;
+			padding-left: 8%;
+		}
+
+		#cost_slider_value {
+			padding-left: 0;
+			font-size: 20px;
+		}
+
+		#cost_slider_p {
+			padding-left: 8%;
+		}
+
+		.ui-corner-all {
+			border-radius: 12px;
+		}
+
+		.ui-slider-handle, .ui-state-default {
+			border: none;
+		
+		}
+
+		.ui-slider-horizontal {
+			height: 1px;
+		}
+
+		.ui-slider-horizontal .ui-slider-handle {
+			top: -.6em;
+		}
+
+		#savings {
+			font-size: 64px;
+			display: inline-block;
+			padding-left: 8%;
+		}
+
+		#savings_over {
+			font-size: 12px;
+			float: right;
+			padding-left: 10px;
+			padding-right: 40px;
+			padding-top: 40px;
+		}
+
+		fieldset {
+			border: none;
+			padding-left: 0;
+		}
+
+		#dealer_button {
+			margin-left: 8%;
+			margin-top: 30px;
+		}
+
+		#request_demo {
+			background-color: #252525;
+			padding-top: 50px;
+			padding-right: 8%;
+			padding-left: 9.5%;
+			padding-bottom: 40px;
+		}
+
+		.next_step_header {
+			color: #fff;
+			font-size: 16px;
+			margin-top: 10px;
+		}
+
+		
+
+		
 
 		.overlay {
 			width: 100%;
@@ -983,33 +1061,42 @@
 				<h2>See how your fuel savings can add up.</h2>
 
 
-				<p class="body_copy">Select your fleet size.</p>
+				<p class="calculate_p">Select your fleet size.</p>
 				<p><span id="trucks_slider_value">1</span> truck<span id="trucks_slider_plural"></span></p>
 
 				<div class="slider" id="trucks_slider"></div>
 
-				<p class="body_copy">Select your average miles per year per truck.</p>
+				<p class="calculate_p">Select your average miles per year per truck.</p>
 				<p><span id="miles_slider_value"></span> miles</p>
 
 				<div class="slider" id="miles_slider"></div>
 
-				<p class="body_copy">Select your average fuel cost per gallon.</p>
-				<p>$<span id="cost_slider_value"></span></p>
+				<p class="calculate_p">Select your average fuel cost per gallon.</p>
+				<p id="cost_slider_p">$<span id="cost_slider_value"></span></p>
 
 				<div class="slider" id="cost_slider"></div>
 
 				<fieldset>
-					<label for="year-1">Year 1</label>
+					<label for="year-1" class="calculate_p">Year 1</label>
 					<input type="radio" name="years" id="year-1" value="1" />
-					<label for="year-3">Year 3</label>
+					<label for="year-3" class="calculate_p">Year 3</label>
 					<input type="radio" name="years" id="year-3" value="3" checked />
-					<label for="year-5">Year 5</label>
+					<label for="year-5" class="calculate_p">Year 5</label>
 					<input type="radio" name="years" id="year-5" value="5" />
 				</fieldset>
 				  
-				<p>$<span id="savings_value"></span></p>
-				<p>Savings over <span id="savings_years"></span> year<span id="savings_years_plural"></span></p>
+				<p id="savings">$ <span id="savings_value"></span></p>
+				<p id="savings_over">Savings over <br> <span id="savings_years"></span> year<span id="savings_years_plural"></span></p>
 
+				<button class="gold_button" id="dealer_button">Talk to a Dealer</button>
+
+			</div>
+
+			<div id="request_demo">
+
+				<img src="steering_wheel.png" alt="">
+
+				<p class="next_step_header">Request a Demo</p>
 			</div>
 
 			
