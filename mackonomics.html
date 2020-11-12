@@ -259,7 +259,7 @@
 			font-size: 10px;
 			line-height: 12px;
 			letter-spacing: 3px;
-			
+			display: flex;
 		}
 
 		#introduction_header {
@@ -377,12 +377,12 @@
 
 		.section_title::after {
 			border-bottom: 1px solid #727272 ;
-			display: inline-block;
-			width: 25%;
+			display: flex;
+			flex: auto;
 			content: "";
 			margin-left: 3%;
 			margin-right: 3%;
-			margin-bottom: 3px;
+			margin-bottom: 5px;
 		}
 
 		#mackonomics h2 {
@@ -461,14 +461,92 @@
 			background-color: #fff;
 		}
 
+		#he_title {
+			padding-bottom: 50px;
+			padding-left: 8%;
+		}
+
 		#card_1 {
 			height: 438px;
 			background-color: #B49867;
 			width: 311px;
+			
+			display: inline-block;
+			float: left;
+			
+			
 		}
 
 		#card_1 h2 {
-			padding: 0;
+			padding-left: 35px;
+			padding-right: 25px;
+		}
+
+		#card_1 img {
+			padding-left: 266px;
+			
+		}
+
+		#card_2 {
+			height: 438px;
+			background-image: url(blue_gradient.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position-y: top;
+			width: 311px;
+			display: inline-block;
+
+			
+		}
+
+		#carousel {
+			display: inline-block;
+			
+			width: 100%;
+			overflow-x: scroll;
+			overflow-y: hidden;
+		}
+
+		#cards {
+			width: 2000px;
+			display: block;
+		}
+
+		.card_numbers {
+			font-size: 10px;
+			padding-left: 35px;
+			padding-top: 15px;
+			padding-bottom: 25px;
+		}
+
+		.card_header {
+			font-family: "Helvetica Neue 55 Regular", "Helvetica", "Arial", sans-serif;
+			font-size: 20px;
+			line-height: 24px;
+			padding-left: 35px;
+			padding-top: 35px;
+		}
+
+		#card_p {
+			padding-left: 35px;
+			padding-right: 35px;
+			padding-top: 20px;
+		}
+
+		#he_disclaimer {
+			font-family: "Helvetica Neue 55 Regular", "Helvetica", "Arial", sans-serif;
+			font-size: 9px;
+			line-height: 9.53px;
+			letter-spacing: 8%;
+			color: #949494;
+			padding-left: 8%;
+			padding-top: 31px;
+			padding-bottom: 58px;
+		}
+
+		#calculate_title {
+			padding-left: 8%;
+			padding-top: 45px;
 		}
 
 		.overlay {
@@ -850,12 +928,43 @@
 
 			<div id="he_package">
 
-				<span class="section_title" id="mackonomics_title">HE+ PACKAGE</span>
+				<span class="section_title" id="he_title">HE+ PACKAGE</span>
 
 				<div id="carousel">
 
-					<div id="card_1"><h2>Drop your fuel costs by 13% with the Mack HE+ Package.*</h2></div>
+					<div id="cards">
+
+						<div id="card_1">
+							
+							<h2>Drop your fuel costs by 13% with the Mack HE+ Package.*</h2>
+							
+
+							<img src="arrow_button.png" alt="">
+
+
+						</div>
+
+						<div id="card_2">
+
+							<p class="card_numbers">01</p>
+
+							<img src="aerodynamic_truck.png" alt="">
+
+							<p class="card_header">Advanced <br> Aerodynamics</p>
+
+							<p class="body_copy_black" id="card_p">The aerodynamic flanges, adjustable trim tabs and 
+								sleek hood design combine to help the Anthem cut through wind to reduce drag. 
+							</p>
+
+						</div>
+
+						
+
+					</div>
+
 				</div>
+
+				<p id="he_disclaimer">*Compared to similar Mack Anthem <br> without the  HE engine and HE+ features.</p>
 
 
 
@@ -864,8 +973,12 @@
 			
 			<div id="calculate">
 
+				<span class="section_title" id="calculate_title">CALCULATE YOUR SAVINGS</span>
 
-				<p>Select your fleet size.</p>
+				<h2>See how your fuel savings can add up.</h2>
+
+
+				<p class="body_copy">Select your fleet size.</p>
 				<p><span id="trucks_slider_value">1</span> truck<span id="trucks_slider_plural"></span></p>
 
 				<div class="slider" id="trucks_slider"></div>
