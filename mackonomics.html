@@ -109,6 +109,17 @@
             	$(".overlay").toggleClass("show");
 			});
 
+
+			// video
+
+			// show video iframe on click
+			$("#video").click(function() {
+				const videoheight = $("#video").height()
+				$("#video").hide();
+				$("iframe").show();
+				$("iframe").height(videoheight);
+			})
+
 		});
 
 	</script>
@@ -243,7 +254,6 @@
 			padding-left: 8%;
 			padding-right: 7%;
 			padding-bottom: 65px;
-
 		}
 
 		h3 {
@@ -288,19 +298,15 @@
 		}
 
 		#calculate_cta img {
-
 			float: right;
 			padding-left: 35px;
 			padding-top: 15px;
-
 		}
 
 		#efficiency {
 			padding-top: 90px;
 			padding-left: 8%;
 			padding-bottom: 88px;
-
-
 		}
 
 		#efficiency_span {
@@ -317,7 +323,6 @@
 
 		#fuel_savings {
 			padding-top: 70px;
-		
 		}
 		
 		.body_copy {
@@ -338,7 +343,6 @@
 			padding-bottom: 74px;
 		}
 
-
 		#hp_h1 {
 			letter-spacing: 0px;
 			padding-top: 74px;
@@ -350,7 +354,6 @@
 			font-size: 20px;
 			line-height: 33px;
 			color: #fff;
-		
 		}
 
 		#hp_span, #torque_span {
@@ -371,7 +374,6 @@
 		}
 
 		#mackonomics_title {
-			
 			padding-left: 8%;
 		}
 
@@ -411,13 +413,10 @@
 			margin: 50px;
 		}
 
-		
-
 		#twitter_handle {
 			font-family: "Helvetica Neue 85 Heavy", "Helvetica", "Arial", sans-serif;
 			font-size: 10px;
 			color: #fff;
-
 		}
 
 		#tweet_icon {
@@ -436,7 +435,6 @@
 			background-repeat: no-repeat;
 			padding-top: 15px;
 			padding-bottom: 30px;
-		
 		}
 
 		#engine_detail h2 {
@@ -471,11 +469,7 @@
 			height: 438px;
 			background-color: #B49867;
 			width: 311px;
-			
-			display: inline-block;
 			float: left;
-			
-			
 		}
 
 		#card_1 h2 {
@@ -485,7 +479,6 @@
 
 		#card_1 img {
 			padding-left: 266px;
-			
 		}
 
 		#card_2 {
@@ -496,13 +489,10 @@
 			background-position-y: top;
 			width: 311px;
 			display: inline-block;
-
-			
 		}
 
 		#carousel {
 			display: inline-block;
-			
 			width: 100%;
 			overflow-x: scroll;
 			overflow-y: hidden;
@@ -812,6 +802,15 @@
 			cursor: pointer;
 		}
 
+		#video {
+			width: 100%;
+		}
+
+		iframe {
+			width: 100%;
+			display: none;
+		}
+
 		@media (min-width: 769px) {
 
 			.sidebar {
@@ -934,22 +933,18 @@
 
 			<div id="mackonomics">
 
-				
-
 				<span class="section_title" id="mackonomics_title">#MACKONOMICS</span>
 
+				<h2>Watch two Mack drivers race to see who can get the most out of their mileage. </h2>
 
-				<h2>Watch two Mack drivers race to see 
-					who can get the most out of their mileage. </h2>
-				
+				<img id="video" src="Video.png" alt="Video - Watch two Mack drivers race to see who can get the most out of their mileage." />
 
-				<img src="Video.png" alt="">
+				<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
 
 				<p class="body_copy" id="mackonomics_p">
 					We sent owner/operator Jamie "Hell Bent" Hagen on the road to help us highlight 
 					the Mack Anthem HE+ Package. Connect with him to see the results for yourself or follow #Mackonomics on your social channels.
 				</p>
-
 
 				<button class="gold_button" id="jamie_button">Follow Jamie</button>
 
@@ -965,18 +960,18 @@
 						With 60,000 miles on it now, it has a lifetime average of 9 mpg. #Mackonomics</p>
 
 				</div>
-
-
 				
 			</div>
 
-			<div id="engine_title" >  <span class="section_title" >ENGINE DETAIL</span> </div>
+			<div id="engine_title">
+				
+				<span class="section_title" >ENGINE DETAIL</span>
+			
+			</div>
 
 			<div id="engine_detail">
 
-				
-
-				<img src="Engine.png" alt="">
+				<img src="Engine.png" alt="Engine" />
 
 				<h2>Built to get the most out of every mile.</h2>
 
@@ -1021,9 +1016,7 @@
 							
 							<h2>Drop your fuel costs by 13% with the Mack HE+ Package.*</h2>
 							
-
 							<img src="arrow_button.png" alt="">
-
 
 						</div>
 
@@ -1041,15 +1034,11 @@
 
 						</div>
 
-						
-
 					</div>
 
 				</div>
 
-				<p id="he_disclaimer">*Compared to similar Mack Anthem <br> without the  HE engine and HE+ features.</p>
-
-
+				<p id="he_disclaimer">*Compared to similar Mack Anthem<br> without the HE engine and HE+ features.</p>
 
 			</div>
 
