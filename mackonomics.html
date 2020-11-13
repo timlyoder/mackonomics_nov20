@@ -239,6 +239,7 @@
 			padding: 16px 40px;
 			border: none;
 			margin: 0;
+			font-size: 12px;
 		}
 
 		#introduction {
@@ -280,7 +281,7 @@
 		}
 
 		#introduction_header {
-			width: 40%;
+			width: 50%;
 			padding-top: 7%;
 			padding-left: 7%;
 		}
@@ -288,7 +289,7 @@
 		#drive_header {
 			padding-left: 7%;
 			padding-top: 10%;
-			width: 75%;
+			width: 85%;
 		}
 
 		#calculate_cta {
@@ -336,6 +337,10 @@
 		#fuel_savings {
 			padding-top: 70px;
 		}
+
+		#fuel_span_p {
+			padding-top: 26px;
+		}
 		
 		.body_copy {
 			font-size: 12px;
@@ -352,13 +357,13 @@
 		}
 
 		#efficiency_h1 {
-			padding-bottom: 74px;
+			padding-bottom: 10px;
 		}
 
 		#hp_h1 {
 			letter-spacing: 0px;
 			padding-top: 74px;
-			padding-bottom: 20px;
+			padding-bottom: 10px;
 		}
 
 		.stat_metric {
@@ -370,13 +375,17 @@
 
 		#hp_span, #torque_span {
 			display: block;
-			padding-bottom: 36px;
+			padding-bottom: 26px;
 		}
 
 		#torque_h1 {
 			letter-spacing: -2px;
 			padding-top: 78px;
-			padding-bottom: 20px;
+			padding-bottom: 10px;
+		}
+
+		#mpg_span {
+			padding-bottom: 26px;
 		}
 
 		#mackonomics {
@@ -491,6 +500,7 @@
 
 		#card_1 img {
 			padding-left: 266px;
+			padding-top: 88px;
 		}
 
 		#card_2 {
@@ -654,6 +664,20 @@
 
 		#privacy {
 			padding-left: 120px;
+		}
+
+		#twitter_copy {
+			font-size: 10px;
+			font-family: "Helvetica Neue 55 Regular", "Helvetica", "Arial", sans-serif;
+			line-height: 18px;
+			color: #fff;
+		}
+
+		.engine_table_copy {
+			font-size: 12px;
+			font-family: "Helvetica Neue 55 Regular", "Helvetica", "Arial", sans-serif;
+			line-height: 14px;
+			color: #000000;
 		}
 
 		.overlay {
@@ -942,7 +966,9 @@
 
 					<h1 class="efficiency_stat" id="efficiency_h1">11+</h1>
 
-					<span class= "body_copy" id="fuel_span">Fuel savings for the long haul.</span>
+					<span class="stat_metric" id="mpg_span">mpg</span> 
+
+					<p id="fuel_span_p"><span class= "body_copy" id="fuel_span">Fuel savings for the long haul.</span></p>
 
 				</div>
 
@@ -995,7 +1021,7 @@
 
 					<span id="twitter_handle">@hellbenthagen</span>
 
-					<p class="body_copy">Just thought I'd share a little progress report on the @MackEndeavor for the last couple days. 
+					<p id="twitter_copy">Just thought I'd share a little progress report on the @MackEndeavor for the last couple days. 
 						With 60,000 miles on it now, it has a lifetime average of 9 mpg. #Mackonomics</p>
 
 				</div>
@@ -1018,23 +1044,23 @@
 
 					<tr>
 
-						<td> <p class="body_copy_black">New wave piston design delivers a higher compression ratio.</p></td>
+						<td> <p class="engine_table_copy">New wave piston design delivers a higher compression ratio.</p></td>
 
-						<td><p class="body_copy_black">Updated gear ratio and turbo compound improves acceleration.</p></td>
+						<td><p class="engine_table_copy">Updated gear ratio and turbo compound improves acceleration.</p></td>
 
 					</tr>
 
 					<tr>
-						<td><p class="body_copy_black">More intelligent EGR valve for improved efficiency.</p></td>
+						<td><p class="engine_table_copy">More intelligent EGR valve for improved efficiency.</p></td>
 
-						<td><p class="body_copy_black">Smaller oil filter housing with two oil filters for less consumption</p></td>
+						<td><p class="engine_table_copy">Smaller oil filter housing with two oil filters for less consumption</p></td>
 					</tr>
 
 					<tr>
 
-						<td><p class="body_copy_black">Lower viscosity oil improves fuel economy.</p></td>
+						<td><p class="engine_table_copy">Lower viscosity oil improves fuel economy.</p></td>
 
-						<td><p class="body_copy_black">Lighter engine design</p></td>
+						<td><p class="engine_table_copy">Lighter engine design</p></td>
 					</tr>
 
 				</table>
