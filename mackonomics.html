@@ -202,6 +202,12 @@
 			/* text-rendering: optimizeSpeed; */
 			line-height: 1.5;
 			font-family: "Helvetica Neue 55 Regular", "Helvetica", "Arial", sans-serif;
+			background-color:#000;
+		}
+
+		#container {
+			max-width: 900px;
+			margin:0 auto;
 		}
 
 		.heavy, button, a.button {
@@ -240,6 +246,15 @@
 			border: none;
 			margin: 0;
 			font-size: 12px;
+			cursor: pointer;
+		}
+
+		#quote_cta button:hover {
+			background-color: #1C1C1C;
+		}
+
+		#calculate_hero_cta {
+			display: none;
 		}
 
 		#introduction {
@@ -278,6 +293,9 @@
 			line-height: 12px;
 			letter-spacing: 3px;
 			display: flex;
+			padding-left: 8%;
+			padding-top: 46px;
+			padding-bottom: 16px;
 		}
 
 		#introduction_header {
@@ -356,14 +374,9 @@
 			color: #000000;
 		}
 
-		#efficiency_h1 {
-			padding-bottom: 10px;
-		}
-
 		#hp_h1 {
 			letter-spacing: 0px;
 			padding-top: 74px;
-			padding-bottom: 10px;
 		}
 
 		.stat_metric {
@@ -381,7 +394,6 @@
 		#torque_h1 {
 			letter-spacing: -2px;
 			padding-top: 78px;
-			padding-bottom: 10px;
 		}
 
 		#mpg_span {
@@ -449,40 +461,31 @@
 			padding-bottom: 35px;
 		}
 
-		#twitter_handle {
+		.twitter_handle {
 			font-family: "Helvetica Neue 85 Heavy", "Helvetica", "Arial", sans-serif;
 			font-size: 10px;
 			color: #fff;
 		}
 
-		#tweet_icon {
+		.tweet_icon {
 			display: inline-block;
 			padding-top: 15px;
 		}
 
-		.tweet {
-			margin-left: 20%;
-			margin-right: 20%;
+		#tweets {
+			margin: 0 20%;
 		}
 
 		#engine_detail {
 			background-color: #fff;
-			background-image: url(engine_background.png);
 			background-repeat: no-repeat;
 			padding-top: 15px;
 			padding-bottom: 30px;
 		}
 
-		#engine_detail h2 {
+		#engine_header {
 			padding-top: 0px;
 			padding-bottom: 40px;
-		}
-
-		#engine_title {
-			background-color: #fff;
-			padding-left: 8%;
-			padding-top: 46px;
-			padding-bottom: 46px;
 		}
 
 		#engine_table td {
@@ -492,13 +495,8 @@
 			vertical-align: top;
 		}
 
-		#he_package {
-			background-color: #fff;
-		}
-
-		#he_title {
-			padding-bottom: 50px;
-			padding-left: 8%;
+		#engine_image {
+			width: 100%;
 		}
 
 		#card_1 {
@@ -518,7 +516,7 @@
 			padding-top: 88px;
 		}
 
-		#card_2 {
+		.card {
 			height: 438px;
 			background-image: url(blue_gradient.png);
 			background-repeat: no-repeat;
@@ -533,6 +531,7 @@
 			width: 100%;
 			overflow-x: scroll;
 			overflow-y: hidden;
+			margin-top: 32px;
 		}
 
 		#cards {
@@ -681,7 +680,7 @@
 			padding-left: 120px;
 		}
 
-		#twitter_copy {
+		.twitter_copy {
 			font-size: 10px;
 			font-family: "Helvetica Neue 55 Regular", "Helvetica", "Arial", sans-serif;
 			line-height: 18px;
@@ -709,10 +708,6 @@
 		#build, #specs {
 			padding-right: 2%;
 			margin-top: 30px;
-		}
-
-		#engine_image {
-			margin-left: 14%;
 		}
 
 		.overlay {
@@ -922,7 +917,234 @@
 			visibility: visible;
 		} 
 
+		#hero h3 {
+			display: none;
+		}
+
+		.cta:hover {
+			background-color: #B49867;
+			border-radius: 12px;
+			background-image: url("arrow.png");
+			background-position: bottom right;
+			background-repeat: no-repeat;
+			background-size: 10%;
+			background-origin: content-box;
+			cursor: pointer;
+		}
+
+		.cta:hover .next_step_copy, .cta:hover .next_step_header {
+			color: #000;
+		}
+
+
 		@media (min-width: 769px) {
+
+			#hero {
+				height: 535px;
+			} 
+
+			#hero h3 {
+				display: block;
+				width: 33%;
+				padding-top: 7%;
+				padding-left: 10%;
+			} 
+
+			#logo {
+				padding-left: 10%;
+				padding-top: 3.5%;
+			}
+
+			#quote_cta button {
+				padding: 25px 50px;
+			}
+
+			#calculate_hero_cta {
+				display: block;
+				float: right;
+			}
+
+			#calculate_hero_cta a {
+				padding: 25px;
+				color: #FFF;
+				font-size: 12px;
+				display: inline-block;
+			}
+
+			#calculate_hero_cta a:hover {
+				text-decoration: underline;
+
+			}
+
+			#introduction_header h3 {
+				display: none;
+			}
+
+			#drive_header {
+				padding-top:0;
+			}
+
+			#drive_header h1 {
+				font-size: 86px;
+				line-height: 80.5px;
+			}
+
+			.efficiency_section {
+				display: inline-block;
+				width: 32%;
+			}
+
+			.efficiency_stat {
+				font-size: 64px;
+			}
+
+			#mackonomics h2 {
+				width: 60%;
+			}
+
+			#video, iframe {
+				padding: 3%;
+			}
+
+			#mackonomics {
+				border-top-left-radius: 6px;
+				border-top-right-radius: 6px;
+			}
+
+			#mackonomics_p {
+				width: 60%;
+				display: inline-block;
+			}
+
+			#calculate_cta {
+				padding-top: 7%;
+			}
+
+			#tweets {
+				margin:0;
+				text-align: center;
+			}
+
+			.tweet {
+				width: 31.5%;
+				display: inline-block;
+				padding: 0 10px;
+				vertical-align: top;
+				text-align: left;
+			}
+
+			#tweet_2, #tweet_3 {
+				margin-top: 0;
+			}
+
+			.twitter_copy {
+				width: 80%;
+			}
+
+			#engine_detail {
+				border-bottom-left-radius: 6px;
+				border-bottom-right-radius: 6px;
+			}
+
+			#engine_detail .section_title {
+				padding-bottom: 32px;
+			}
+
+			#engine_header {
+				width: 40%;
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			#engine_table {
+				width: 55%;
+				display: inline-block;
+			}
+
+			#card_1 {
+				width: 365px;
+			}
+
+			.card {
+				width: 345px;
+			}
+
+			#card_1 img {
+				padding-left: 320px;
+			}
+
+			#calculate_h2 {
+				width: 60%;
+			}
+
+			.slide_container .calculate_p {
+				height: 50px;
+			}
+
+			.slides {
+				padding: 0 7%;
+			}
+
+			.slide_container {
+				width:25%;
+				display: table-cell;
+			}
+
+			#savings_over {
+				padding-top: 30px;
+			}
+
+			#dealer_button {
+				float: right;
+				margin-right: 10%;
+				margin-top: 0;
+			}
+
+			#request_demo {
+				padding: 15px;
+				padding-bottom: 40px;
+				border-radius: 6px;
+			}
+
+			#request_demo .section_title {
+				padding-bottom: 60px;
+			}
+
+			#request_demo .cta {
+				width: 25%;
+				display: table-cell;
+				margin: 0!important;
+				padding: 15px;
+			}
+
+			.cta img {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+
+			#footer {
+				padding-left: 0;
+			}
+			
+			#footer_left, #footer_right {
+				display: inline-block;
+				width: 40%;
+			}
+
+			#footer_right {
+				float: right;
+				text-align: right;
+			}
+
+			#social {
+				display: inline-flex;
+			}
+
+			#privacy {
+				padding-top: 20px;
+				padding-right: 20px;
+			}
+
 
 			.sidebar {
 				width: 50vw;
@@ -966,6 +1188,18 @@
 
 			</div>
 
+
+			<div id="calculate_hero_cta">
+
+				<a href="#calculate" class="button">
+					Calculate my Savings
+				</a>
+
+			</div>
+
+
+			<h3 class="heavy">Introducing the Next-Generation MP8HE</h3>
+
 		</div>
 
 
@@ -997,31 +1231,29 @@
 
 				<span id="efficiency_span" class="section_title">EFFICIENCY MEETS PROFICIENCY</span>
 
-				<div id="fuel_savings">
+				<div id="fuel_savings" class="efficiency_section">
 
 					<h1 class="efficiency_stat" id="efficiency_h1">11+</h1>
 
-					<span class="stat_metric" id="mpg_span">mpg</span> 
+					<span class="stat_metric" id="mpg_span">miles per gallon</span> 
 
 					<p id="fuel_span_p"><span class= "body_copy" id="fuel_span">Fuel savings for the long haul.</span></p>
 
 				</div>
 
 
-				<div id="hp">
+				<div id="hp" class="efficiency_section">
 
-					<h1 class="efficiency_stat" id="hp_h1">
-						445
-					</h1>
+					<h1 class="efficiency_stat" id="hp_h1">445</h1>
 
 					<span id="hp_span" class="stat_metric">max hp</span>
 
 					<span class="body_copy">Equal parts power and performance.</span>
 				</div>
 
-				<div id="torque">
+				<div id="torque" class="efficiency_section">
 
-					<h1 id="torque_h1" >1860</h1>
+					<h1 id="torque_h1" class="efficiency_stat">1860</h1>
 
 					<span class="stat_metric" id="torque_span">lb.-ft. max torque</span>
 
@@ -1048,62 +1280,59 @@
 
 				<a class="gold_button button" id="jamie_button">Follow Jamie</a>
 
-				<div class="tweet">
+				<div id="tweets">
 
-					<div id="tweet_1">
+					<div id="tweet_1" class="tweet">
 
-						<img src="mackonomics_tweet.png" alt="" id="tweet_image">
+						<img src="mackonomics_tweet.png" alt="" class="tweet_image">
 
-						<img src="twitter_icon.png" alt="" id="tweet_icon">
+						<img src="twitter_icon.png" alt="" class="tweet_icon">
 
-						<span id="twitter_handle">@hellbenthagen</span>
+						<span class="twitter_handle">@hellbenthagen</span>
 
-						<p id="twitter_copy">Just thought I'd share a little progress report on the @MackEndeavor for the last couple days. 
-						With 60,000 miles on it now, it has a lifetime average of 9 mpg. #Mackonomics</p>
-
-					</div>
-
-					<div id="tweet_2">
-
-						<img src="mackonomics_tweet_2.png" alt="" id="tweet_image">
-
-						<img src="twitter_icon.png" alt="" id="tweet_icon">
-
-						<span id="twitter_handle">@hellbenthagen</span>
-
-						<p id="twitter_copy">While I was off getting married I had my first oil change on the "Endeavour" and 
-							managed to have my axle hubs preloaded as well. #Mackonomics </p>
+						<p class="twitter_copy">
+							Just thought I'd share a little progress report on the @MackEndeavor for the last couple days. With 60,000 miles on it now, it has a lifetime average of 9 mpg. #Mackonomics
+						</p>
 
 					</div>
 
-					<div id="tweet_3">
+					<div id="tweet_2" class="tweet">
 
-						<img src="mackonomics_tweet_3.png" alt="" id="tweet_image">
+						<img src="mackonomics_tweet_2.png" alt="" class="tweet_image">
 
-						<img src="twitter_icon.png" alt="" id="tweet_icon">
+						<img src="twitter_icon.png" alt="" class="tweet_icon">
 
-						<span id="twitter_handle">@hellbenthagen</span>
+						<span class="twitter_handle">@hellbenthagen</span>
 
-						<p id="twitter_copy">High expectations lead to disappointment they say. I want that 10 mpg so bad 
-							that this is disappointing. Maybe I just need to smile and be happy its not bad. 😊 #Mackonomics</p>
-						
+						<p class="twitter_copy">
+							While I was off getting married I had my first oil change on the "Endeavour" and managed to have my axle hubs preloaded as well. #Mackonomics </p>
+
+					</div>
+
+					<div id="tweet_3" class="tweet">
+
+						<img src="mackonomics_tweet_3.png" alt="" class="tweet_image">
+
+						<img src="twitter_icon.png" alt="" class="tweet_icon">
+
+						<span class="twitter_handle">@hellbenthagen</span>
+
+						<p class="twitter_copy">
+							High expectations lead to disappointment they say. I want that 10 mpg so bad that this is disappointing. Maybe I just need to smile and be happy its not bad. 😊 #Mackonomics
+						</p>
 					</div>
 
 				</div>
 				
 			</div>
 
-			<div id="engine_title">
-				
-				<span class="section_title" >ENGINE DETAIL</span>
-			
-			</div>
-
 			<div id="engine_detail">
 
-				<img src="Engine.png" alt="Engine" id="engine_image" />
+				<span class="section_title">ENGINE DETAIL</span>
 
-				<h2>Built to get the most out of every mile.</h2>
+				<img src="Engine.jpg" alt="Engine" id="engine_image" />
+
+				<h2 id="engine_header">Built to get the most out of every mile.</h2>
 
 				<table id="engine_table">
 
@@ -1130,13 +1359,7 @@
 
 				</table>
 
-
-			</div>
-
-
-			<div id="he_package">
-
-				<span class="section_title" id="he_title">HE+ PACKAGE</span>
+				<span class="section_title">HE+ PACKAGE</span>
 
 				<div id="carousel">
 
@@ -1150,7 +1373,7 @@
 
 						</div>
 
-						<div id="card_2">
+						<div id="card_2" class="card">
 
 							<p class="card_numbers">01</p>
 
@@ -1179,21 +1402,36 @@
 
 				<h2 id="calculate_h2">See how your fuel savings can add up.</h2>
 
+				<div class="slides">
 
-				<p class="calculate_p">Select your fleet size.</p>
-				<p><span id="trucks_slider_value">1</span> truck<span id="trucks_slider_plural"></span></p>
+					<span class="slide_container">
 
-				<div class="slider" id="trucks_slider"></div>
+						<p class="calculate_p">Select your fleet size.</p>
+						<p><span id="trucks_slider_value">1</span> truck<span id="trucks_slider_plural"></span></p>
 
-				<p class="calculate_p">Select your average miles per year per truck.</p>
-				<p><span id="miles_slider_value"></span> miles</p>
+						<div class="slider" id="trucks_slider"></div>
 
-				<div class="slider" id="miles_slider"></div>
+					</span>
 
-				<p class="calculate_p">Select your average fuel cost per gallon.</p>
-				<p id="cost_slider_p">$<span id="cost_slider_value"></span></p>
+					<span class="slide_container">
 
-				<div class="slider" id="cost_slider"></div>
+						<p class="calculate_p">Select your average miles per year per truck.</p>
+						<p><span id="miles_slider_value"></span> miles</p>
+
+						<div class="slider" id="miles_slider"></div>
+
+					</span>
+
+					<span class="slide_container">
+
+						<p class="calculate_p">Select your average fuel cost per gallon.</p>
+						<p id="cost_slider_p">$<span id="cost_slider_value"></span></p>
+
+						<div class="slider" id="cost_slider"></div>
+
+					</span>
+
+				</div>
 
 				<fieldset>
 					<input type="radio" name="years" id="year-1" value="1" />
@@ -1213,7 +1451,10 @@
 
 			<div id="request_demo">
 
-				<div id="steering_wheel">
+				<span class="section_title">TAKE THE NEXT STEP</span>
+
+
+				<div id="steering_wheel" class="cta">
 
 					<img src="steering_wheel.png" alt="">
 
@@ -1223,7 +1464,7 @@
 
 				</div>
 
-				<div id="build">
+				<div id="build" class="cta">
 
 					<img src="build_your_anthem.png" alt="">
 
@@ -1233,7 +1474,7 @@
 
 				</div>
 
-				<div id="specs">
+				<div id="specs" class="cta">
 
 					<img src="specs.png" alt="">
 
@@ -1247,26 +1488,34 @@
 
 			<div id="footer">
 
-				<img src="Mack_Logo.png" alt="">
+				<div id="footer_left">
 
-				<p class="fine_print">Copyright 2020 Mack Trucks</p>
+					<img src="Mack_Logo.png" alt="">
 
-				<div id="social">
-
-					<img src="twitter_icon_gray.png" alt="">
-
-					<img src="linked_in_icon.png" alt="">
-
-					<img src="facebook_icon.png" alt="">
-
-					<img src="youtube_icon.png" alt="">
-
-					<img src="instagram_icon.png" alt="">
-
+					<p class="fine_print">Copyright 2020 Mack Trucks</p>
 
 				</div>
 
-				<p class="fine_print" id="privacy">Privacy / Contact Us</p>
+				<div id="footer_right">
+
+					<div id="social">
+
+						<img src="twitter_icon_gray.png" alt="">
+
+						<img src="linked_in_icon.png" alt="">
+
+						<img src="facebook_icon.png" alt="">
+
+						<img src="youtube_icon.png" alt="">
+
+						<img src="instagram_icon.png" alt="">
+
+					</div>
+
+					<p class="fine_print" id="privacy">Privacy / Contact Us</p>
+
+				</div>
+
 			</div>
 
 		</div>
