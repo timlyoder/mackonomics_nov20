@@ -523,6 +523,7 @@
 			background-position-y: top;
 			width: 311px;
 			display: inline-block;
+			vertical-align: top;
 		}
 
 		#carousel {
@@ -534,8 +535,9 @@
 		}
 
 		#cards {
-			width: 2000px;
+			width: 1760px;
 			display: block;
+			background-color: #C6C6C6;
 		}
 
 		.card_numbers {
@@ -1051,6 +1053,7 @@
 
 			.card {
 				width: 345px;
+				vertical-align: top;
 			}
 
 			#card_1 img {
@@ -1157,6 +1160,13 @@
 				margin-left: 30%;
 			}
 
+		}
+
+		@media (max-width: 768px) {
+			
+			#cards {
+				width: 1570px;
+			}
 		}
 
 	</style>
@@ -1375,12 +1385,54 @@
 
 							<p class="card_numbers">01</p>
 
-							<img src="aerodynamic_truck.png" alt="">
+							<img src="Advanced_Aerodynamics.png" alt="">
 
 							<p class="card_header">Advanced <br> Aerodynamics</p>
 
 							<p class="body_copy_black" id="card_p">The aerodynamic flanges, adjustable trim tabs and 
 								sleek hood design combine to help the Anthem cut through wind to reduce drag. 
+							</p>
+
+						</div>
+
+						<div id="energy_recovery" class="card">
+
+							<p class="card_numbers">02</p>
+
+							<img src="Energy_Recovery_Technology.png" alt="">
+
+							<p class="card_header">Energy Recovery Technology (ERT)</p>
+
+							<p class="body_copy_black" id="card_p">ERT captures heat from the engine exhaust and converts it to torque, 
+								burning up to 9.5% less fuel in highway operations.*
+							</p>
+
+						</div>
+
+						<div id="predictive_cruise" class="card">
+
+							<p class="card_numbers">03</p>
+
+							<img src="Predictive_Cruise.png" alt="">
+
+							<p class="card_header">Mack Predictive Cruise</p>
+
+							<p class="body_copy_black" id="card_p">When cruise control is engaged,this intelligent navigation feature memorizes GPS data of up to 4,500 hills 
+								to engage the ideal shift strategy for repeated routes.
+							</p>
+
+						</div>
+
+						<div id="m_drive" class="card">
+
+							<p class="card_numbers">04</p>
+
+							<img src="mDrive.png" alt="">
+
+							<p class="card_header">mDRIVE &trade; 12-Speed Overdrive Transmission </p>
+
+							<p class="body_copy_black" id="card_p">When cruise control is engaged,this intelligent navigation feature memorizes GPS data of up to 4,500 hills 
+								to engage the ideal shift strategy for repeated routes.
 							</p>
 
 						</div>
