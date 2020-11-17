@@ -124,6 +124,16 @@
 				$("iframe").height(videoheight);
 			})
 
+
+			// slide anchors
+
+			$(document).ready(function(){
+				$( "a.scroll" ).click(function( event ) {
+					event.preventDefault();
+					$("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+				});
+			});
+
 		});
 
 	</script>
@@ -1218,7 +1228,7 @@
 
 			<div id="calculate_hero_cta">
 
-				<a href="#calculate" class="button">
+				<a href="#calculate" class="button scroll">
 					Calculate my Savings
 				</a>
 
@@ -1246,7 +1256,7 @@
 
 			<div id="calculate_cta">
 
-				<a class="gold_button button" href="#calculate">
+				<a class="gold_button button scroll" href="#calculate">
 					Calculate Savings
 				</a>
 
