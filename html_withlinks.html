@@ -48,37 +48,63 @@
 
 			function slideChange( event=null, ui=null ) {
 
-				// when a slider is changed
-				// console.log("slideChange()");
+// when a slider is changed
+// console.log("slideChange()");
 
-				// get slider values
-				const trucks = $("#trucks_slider").slider( "value" );
-				const miles = $("#miles_slider").slider( "value" );
-				const cost = $("#cost_slider").slider( "value" );
-				const years = $("input[name='years']:checked").val();
+setTimeout(function(){
+		
+	// get slider values
 
-				// compute savings
-				const savings = Math.round( trucks * miles * cost * years * .13);
+	// const trucks = $("#trucks_slider").slider( "value" );
+	const miles = $("#miles_slider").slider( "value" );
+	const cost = $("#cost_slider").slider( "value" );
+	const years = $("input[name='years']:checked").val();
 
-				// update values
-				$("#trucks_slider_value").html(trucks);
-				$("#trucks_slider_plural").html( (trucks > 1) ? "s" : "" );
-				$("#miles_slider_value").html(formatNumberCommas(miles));
-				$("#cost_slider_value").html(currencyFormat(cost));
-				$("#savings_value").html(formatNumberCommas(savings));
-				$("#savings_years").html(years);
-				$("#savings_years_plural").html( (years > 1) ? "s" : "" );
+	var trucks = 1;
+	const truck_position = $("#trucks_slider").slider( "value" );
 
-			}
+	switch(truck_position) {
+		case 2:
+			trucks = 5;
+			break;
+		case 3:
+			trucks = 10;
+			break;
+		case 4:
+			trucks = 50;
+			break;
+		case 5:
+			trucks = 100;
+			break;
+		default:
+			trucks = 1;
+			break;
+	}
 
-			// init sliders
+	// compute savings
+	const savings = Math.round( trucks * miles * cost * years * .13);
 
-			$( "#trucks_slider" ).slider({
-				min: 1,
-				max: 10,
-				value: 1,
-				slide: slideChange
-			});
+	// update values
+	$("#trucks_slider_value").html(trucks);
+	$("#trucks_slider_plural").html( (trucks > 1) ? "s" : "" );
+	$("#miles_slider_value").html(formatNumberCommas(miles));
+	$("#cost_slider_value").html(currencyFormat(cost));
+	$("#savings_value").html(formatNumberCommas(savings));
+	$("#savings_years").html(years);
+	$("#savings_years_plural").html( (years > 1) ? "s" : "" );
+
+}, 100);
+
+}
+
+// init sliders
+
+$( "#trucks_slider" ).slider({
+min: 1,
+max: 5,
+value: 1,
+slide: slideChange
+});
 
 			$( "#miles_slider" ).slider({
 				min: 10000,
