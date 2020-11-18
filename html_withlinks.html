@@ -173,6 +173,65 @@
 			});
 
 
+			// video tweaking
+
+			var breakpoint = 768;
+
+			loadVideo();
+
+			// Pause when page is not in the foreground
+			$(window).blur(function() {
+				$('#herovideo')[0].pause();
+			});
+
+			// Play when page returns to the foreground
+			$(window).focus(function() {
+				if ($(document).width() > breakpoint) {
+					$('#herovideo')[0].play();
+				}
+			});
+
+			// Play video when page resizes
+			$(window).resize(function() {
+				loadVideo();
+			});
+
+			// Play when page returns from browser history button
+			window.onpopstate = function() {
+				if ($(document).width() > breakpoint) {
+					$('#herovideo')[0].play();
+				}
+			};
+
+			function loadVideo() {
+				var video = document.getElementById('herovideo');
+
+				// Remove existing source tags for mobile
+				while (video.firstChild) {
+					video.removeChild(video.firstChild);
+				}
+
+				// Add source tags if not already present
+				var source = document.createElement('source');
+
+				if ($(document).width() > breakpoint) {
+					// desktop (over 768px wide)
+					source.setAttribute('src', 'herovideo720.mp4');
+					source.setAttribute('type', 'video/mp4');
+				} else {
+					// mobile (less than 768px wide)
+					source.setAttribute('src', 'herovideo480.mp4');
+					source.setAttribute('type', 'video/mp4');
+				}
+
+				// Play the video
+				video.appendChild(source);
+				$('#herovideo')[0].play();
+
+			}
+
+
+
 		});
 
 	</script>
@@ -1279,7 +1338,7 @@
 
 	<div id="container">
 	
-		<video autoplay loop class="video" src="herovideo720.mp4" poster="https://img03.en25.com/EloquaImages/clients/MackTrucks/%7B7420deae-8f6d-4087-a4d6-57938e137b45%7D_mackonomics_hero_nov20.png" id="herovideo"></video>
+		<video autoplay loop class="video" poster="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7Bc5774111-5f0d-4c69-a3cb-4c661c48d8e7%7D_Mackonomics_hero_Nov20.jpg" id="herovideo"></video>
 
 		<div id="hero">
 
@@ -1622,7 +1681,7 @@
 
 				<div id="steering_wheel" class="cta" href="https://www.macktrucks.com/buy-mack/find-a-dealer/">
 
-					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7Bb8a461e4-3727-4b2c-b4ed-156a79d4588c%7D_steering_wheel.png" alt="">
+					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B86b45b91-24d4-4ed1-b892-6270eecf17a7%7D_steering_wheel.jpg" alt="" />
 
 					<p class="next_step_header">Request a Demo</p>
 
@@ -1632,7 +1691,7 @@
 
 				<div id="build" class="cta" href="https://build.macktrucks.com/">
 
-					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7Bfdc6ec5f-6803-4060-a04c-a6646b504344%7D_build_your_anthem.png" alt="">
+					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B37ca31e6-d4e5-4c8e-a434-940ed5ffdde6%7D_build_your_anthem.jpg" alt="" />
 
 					<p class="next_step_header">Build your Anthem</p>
 
@@ -1642,7 +1701,7 @@
 
 				<div id="specs" class="cta" href="https://www.macktrucks.com/trucks/anthem/specs/">
 
-					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B90cedce2-5969-44e1-9564-51eaa5d46466%7D_specs.png" alt="">
+					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B2ad13983-40f3-4005-b461-6150fab64039%7D_specs.jpg" alt="" />
 
 					<p class="next_step_header">Get the Specs</p>
 
