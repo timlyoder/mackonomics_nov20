@@ -259,16 +259,27 @@
 			display: inline-block;
 		}
 
-		#hero {
-			background-image: url("https://img03.en25.com/EloquaImages/clients/MackTrucks/%7B7420deae-8f6d-4087-a4d6-57938e137b45%7D_mackonomics_hero_nov20.png");
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
+		#hero, video {
 			height: 250px;
 			width: 100%;
+			top:0;
+		}
+
+		#hero {
+			z-index: 5;
+			position: relative;
+		}
+
+		#herovideo {
+			z-index: 1;
+			object-fit: cover;
+			object-position: center;
+			position: absolute;
+			max-width:1400px;
 		}
 
 		#logo {
+			z-index: 5;
 			padding-top: 15px;
 			padding-left: 7%;
 			display: inline-block;
@@ -972,7 +983,7 @@
 
 		@media (min-width: 769px) {
 
-			#hero {
+			#hero, #herovideo {
 				height: 535px;
 			} 
 
@@ -1226,6 +1237,7 @@
 
 	<div id="container">
 	
+		<video autoplay loop class="video" src="herovideo720.mp4" poster="https://img03.en25.com/EloquaImages/clients/MackTrucks/%7B7420deae-8f6d-4087-a4d6-57938e137b45%7D_mackonomics_hero_nov20.png" id="herovideo"></video>
 
 		<div id="hero">
 
