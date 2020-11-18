@@ -165,6 +165,14 @@
 			});
 
 
+			// cta links
+
+			$( ".cta" ).click(function( event ) {
+				// go to the link in the div's href attribute
+				window.location.href = $(this).attr("href");
+			});
+
+
 		});
 
 	</script>
@@ -175,11 +183,14 @@
 
 	<style>
 
+
 		/* Fonts */
+
 		@font-face{ font-family: "Helvetica Neue 85 Heavy"; src:url(https://www.macktrucks.com/css/fonts/293F49_2_0.eot); src: url(https://www.macktrucks.com/css/fonts/293F49_2_0.eot#iefix) format("embedded-opentype"), url(https://www.macktrucks.com/css/fonts/293F49_2_0.woff) format("woff"), url(https://www.macktrucks.com/css/fonts/293F49_2_0.ttf) format("truetype"); }
 		@font-face{ font-family: "Helvetica Neue 75 Bold"; src:url(https://www.macktrucks.com/css/fonts/293F49_0_0.eot); src: url(https://www.macktrucks.com/css/fonts/293F49_0_0.eot#iefix) format("embedded-opentype"), url(https://www.macktrucks.com/css/fonts/293F49_0_0.woff) format("woff"), url(https://www.macktrucks.com/css/fonts/293F49_0_0.ttf) format("truetype"); }
 		@font-face{ font-family: "Helvetica Neue 65 Medium"; src:url(https://www.macktrucks.com/css/fonts/293F49_1_0.eot); src: url(https://www.macktrucks.com/css/fonts/293F49_1_0.eot#iefix) format("embedded-opentype"), url(https://www.macktrucks.com/css/fonts/293F49_1_0.woff) format("woff"), url(https://www.macktrucks.com/css/fonts/293F49_1_0.ttf) format("truetype"); font-weight: 500; font-style: normal; }
 		@font-face{ font-family: "Helvetica Neue 55 Regular"; src: url(https://www.macktrucks.com/css/fonts/HelveticaNeueLTPro-Roman.woff) format("woff"); font-weight: 400; font-style: normal }
+
 
 		/* Reset */
 
@@ -233,6 +244,7 @@
 				scroll-behavior: auto !important;
 			}
 		}
+
 
 		/*
 		
@@ -503,7 +515,6 @@
 			margin-left: 8%;
 			margin-right: 8%;
 			margin-top: 20px;
-			
 		}
 
 		#calculate_h2 {
@@ -642,7 +653,7 @@
 		.calculate_p {
 			padding-left: 8%;
 			padding-bottom: 15px;
-			font-size: 12px;
+			font-size: 14px;
 			font-family: "Helvetica Neue 55 Regular", "Helvetica", "Arial", sans-serif;
 			line-height: 18px;
 			color: #8A8A8A;
@@ -1191,6 +1202,7 @@
 				display: table-cell;
 				margin: 0!important;
 				padding: 15px;
+				cursor: pointer;
 			}
 
 			.cta img {
@@ -1370,15 +1382,14 @@
 
 				<span class="section_title" id="mackonomics_title">#MACKONOMICS</span>
 
-				<h2>Watch two Mack drivers race to see who can get the most out of their mileage. </h2>
+				<h2>Watch two Mack drivers race to see who can get the most out of their mileage.</h2>
 
-				<img id="video" src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7Ba1e4b6a1-ed73-45fd-aaa9-43003d581118%7D_Video.png" alt="Video - Watch two Mack drivers race to see who can get the most out of their mileage." />
+				<img id="video" src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B5ced0ca3-a77c-4971-8b2d-7b682e2315ba%7D_raceto11_videocover_1x.png" alt="Video - Watch two Mack drivers race to see who can get the most out of their mileage." />
 
 				<iframe src="https://www.youtube.com/embed/V3psHPq8AN0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 				<p class="body_copy" id="mackonomics_p">
-					We sent owner/operator Jamie "Hell Bent" Hagen on the road to help us highlight 
-					the Mack Anthem HE+ Package. Connect with him to see the results for yourself or follow #Mackonomics on your social channels.
+					We sent owner/operator Jamie "Hell Bent" Hagen on the road to help us highlight the Mack Anthem HE+ Package. Connect with him to see the results for yourself or follow #Mackonomics on your social channels.
 				</p>
 
 				<a href="https://twitter.com/hellbenthagen" class="gold_button button" id="jamie_button">Follow Jamie</a>
@@ -1445,7 +1456,7 @@
 
 					<tr>
 
-						<td> <p class="engine_table_copy">New wave piston design delivers a higher compression ratio.</p></td>
+						<td><p class="engine_table_copy">New wave piston design delivers a higher compression ratio.</p></td>
 
 						<td><p class="engine_table_copy">Updated gear ratio and turbo compound improves acceleration.</p></td>
 
@@ -1488,8 +1499,8 @@
 
 							<p class="card_header">Advanced <br> Aerodynamics</p>
 
-							<p class="body_copy_black" id="card_p">The aerodynamic flanges, adjustable trim tabs and 
-								sleek hood design combine to help the Anthem cut through wind to reduce drag. 
+							<p class="body_copy_black" id="card_p">
+								The aerodynamic flanges, adjustable trim tabs and sleek hood design combine to help the Anthem cut through wind to reduce drag. 
 							</p>
 
 						</div>
@@ -1502,8 +1513,8 @@
 
 							<p class="card_header">Energy Recovery Technology (ERT)</p>
 
-							<p class="body_copy_black" id="card_p">ERT captures heat from the engine exhaust and converts it to torque, 
-								burning up to 9.5% less fuel in highway operations.*
+							<p class="body_copy_black" id="card_p">
+								ERT captures heat from the engine exhaust and converts it to torque, burning up to 9.5% less fuel in highway operations.*
 							</p>
 
 						</div>
@@ -1516,8 +1527,8 @@
 
 							<p class="card_header">Mack Predictive Cruise</p>
 
-							<p class="body_copy_black" id="card_p">When cruise control is engaged,this intelligent navigation feature memorizes GPS data of up to 4,500 hills 
-								to engage the ideal shift strategy for repeated routes.
+							<p class="body_copy_black" id="card_p">
+								When cruise control is engaged,this intelligent navigation feature memorizes GPS data of up to 4,500 hills to engage the ideal shift strategy for repeated routes.
 							</p>
 
 						</div>
@@ -1528,10 +1539,10 @@
 
 							<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B7017812d-e618-4487-be4d-2fdc0ed22e4b%7D_mDrive.png" alt="">
 
-							<p class="card_header">mDRIVE &trade; 12-Speed Overdrive Transmission </p>
+							<p class="card_header">mDRIVE &trade; 12-Speed Overdrive Transmission</p>
 
-							<p class="body_copy_black" id="card_p">When cruise control is engaged,this intelligent navigation feature memorizes GPS data of up to 4,500 hills 
-								to engage the ideal shift strategy for repeated routes.
+							<p class="body_copy_black" id="card_p">
+								When cruise control is engaged,this intelligent navigation feature memorizes GPS data of up to 4,500 hills to engage the ideal shift strategy for repeated routes.
 							</p>
 
 						</div>
@@ -1603,33 +1614,33 @@
 				<span class="section_title" id="take_next_step">TAKE THE NEXT STEP</span>
 
 
-				<div id="steering_wheel" class="cta">
+				<div id="steering_wheel" class="cta" href="https://www.macktrucks.com/buy-mack/find-a-dealer/">
 
-					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7Bf6a49db9-1d01-4c38-90d9-0d04838724ca%7D_steering_wheel.png" alt="">
+					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7Bb8a461e4-3727-4b2c-b4ed-156a79d4588c%7D_steering_wheel.png" alt="">
 
 					<p class="next_step_header">Request a Demo</p>
 
-					<p class="next_step_copy">Talk to your local Mack <br> dealer about Mack Anthem.</p>
+					<p class="next_step_copy">Talk to your local Mack<br> dealer about Mack Anthem.</p>
 
 				</div>
 
-				<div id="build" class="cta">
+				<div id="build" class="cta" href="https://build.macktrucks.com/">
 
 					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7Bfdc6ec5f-6803-4060-a04c-a6646b504344%7D_build_your_anthem.png" alt="">
 
 					<p class="next_step_header">Build your Anthem</p>
 
-					<p class="next_step_copy">Design your own Mack <br> Anthem with Truck Builder. </p>
+					<p class="next_step_copy">Design your own Mack<br> Anthem with Truck Builder.</p>
 
 				</div>
 
-				<div id="specs" class="cta">
+				<div id="specs" class="cta" href="https://www.macktrucks.com/trucks/anthem/specs/">
 
 					<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B90cedce2-5969-44e1-9564-51eaa5d46466%7D_specs.png" alt="">
 
 					<p class="next_step_header">Get the Specs</p>
 
-					<p class="next_step_copy">Get the full story on the 2021 Mack Anthem HE+ Package. </p>
+					<p class="next_step_copy">Get the full story on the 2021 Mack Anthem HE+ Package.</p>
 
 				</div>
 
