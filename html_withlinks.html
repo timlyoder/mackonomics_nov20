@@ -719,9 +719,7 @@
 		}
 
 		#social {
-			display: flex;
-			padding-left: 100px;
-			padding-bottom: 10px;
+			display: inline-flex;
 		}
 
 		#social svg {
@@ -729,7 +727,7 @@
 		}
 
 		#privacy {
-			padding-left: 120px;
+			display: block;
 		}
 
 		.twitter_copy {
@@ -989,6 +987,9 @@
 			padding-left: 0px;
 		}
 
+		#footer_right {
+			text-align: center;
+		}
 
 		@media (min-width: 769px) {
 
@@ -1191,10 +1192,6 @@
 			.cta:hover .next_step_copy, .cta:hover .next_step_header {
 				color: #000;
 			}
-
-			#footer {
-				padding-left: 0;
-			}
 			
 			#footer_left, #footer_right {
 				display: inline-block;
@@ -1204,10 +1201,6 @@
 			#footer_right {
 				float: right;
 				text-align: right;
-			}
-
-			#social {
-				display: inline-flex;
 			}
 
 			#privacy {
@@ -1233,6 +1226,15 @@
 			}
 
 		}
+
+		@media (min-width: 1400px) {
+
+			#footer {
+				padding-left: 0;
+			}
+
+		}
+
 
 	</style>
 
