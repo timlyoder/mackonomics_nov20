@@ -152,12 +152,18 @@
 
 			// slide anchors
 
-			$(document).ready(function(){
-				$( "a.scroll" ).click(function( event ) {
-					event.preventDefault();
-					$("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
-				});
+			$( "a.scroll" ).click(function( event ) {
+				event.preventDefault();
+				$("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
 			});
+
+			// cards arrow
+
+			$( "#cards_button" ).click(function( event ) {
+				// animate scrolling the carousel left until it reaches the second card's position, or the end
+				$("#carousel").animate( { scrollLeft: '+=' + $("#card_2").position().left }, 500);
+			});
+
 
 		});
 
@@ -996,6 +1002,10 @@
 			text-align: center;
 		}
 
+		#cards_button {
+			cursor: pointer;
+		}
+
 		@media (min-width: 769px) {
 
 			#hero, #herovideo {
@@ -1413,7 +1423,7 @@
 							<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7Bd3ccdd04-52d4-4915-a681-07823b8f1bfd%7D_twitter_icon.png" alt="" class="tweet_icon">
 							<span class="twitter_handle">@hellbenthagen</span>
 						</a>
-						
+
 						<p class="twitter_copy">
 							High expectations lead to disappointment they say. I want that 10 mpg so bad that this is disappointing. Maybe I just need to smile and be happy its not bad.  #Mackonomics
 						</p>
@@ -1466,7 +1476,7 @@
 							
 							<h2>Drop your fuel costs by 13% with the Mack HE+ Package.*</h2>
 							
-							<img src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B18b4e036-f32a-4a91-aee6-a303248bca5b%7D_arrow_button.png" alt="" />
+							<img id="cards_button" src="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B18b4e036-f32a-4a91-aee6-a303248bca5b%7D_arrow_button.png" alt="" />
 
 						</div>
 
