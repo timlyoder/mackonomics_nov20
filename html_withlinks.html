@@ -175,6 +175,7 @@
 
 			// video tweaking
 
+			/* 
 			var breakpoint = 768;
 
 			loadVideo();
@@ -229,7 +230,7 @@
 				$('#herovideo')[0].play();
 
 			}
-
+			*/
 
 
 		});
@@ -1348,7 +1349,10 @@
 
 	<div id="container">
 	
-		<video autoplay loop class="video" poster="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B0b87518f-ed47-430a-b107-d421ead8e170%7D_Mackonomics_hero_Nov20.jpg" id="herovideo"></video>
+		<video autoplay loop class="video" poster="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B0b87518f-ed47-430a-b107-d421ead8e170%7D_Mackonomics_hero_Nov20.jpg" id="herovideo">
+			<source media="(min-width:769px)" type="video/mp4" src="http://images.respond.macktrucks.com/Web/MackTrucks/{c9af493e-60fe-4c82-b335-c230c4017b3a}_herovideo720.mp4">
+			<source type="video/mp4" src="http://images.respond.macktrucks.com/Web/MackTrucks/{082dff24-4128-4a6b-bdfc-6736a0d047ea}_herovideo480.mp4">
+		</video>
 
 		<div id="hero">
 
