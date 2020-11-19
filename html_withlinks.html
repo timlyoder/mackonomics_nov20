@@ -172,65 +172,7 @@
 				window.location.href = $(this).attr("href");
 			});
 
-
-			// video tweaking
-
-			/* 
-			var breakpoint = 768;
-
-			loadVideo();
-
-			// Pause when page is not in the foreground
-			$(window).blur(function() {
-				$('#herovideo')[0].pause();
-			});
-
-			// Play when page returns to the foreground
-			$(window).focus(function() {
-				if ($(document).width() > breakpoint) {
-					$('#herovideo')[0].play();
-				}
-			});
-
-			// Play video when page resizes
-			$(window).resize(function() {
-				loadVideo();
-			});
-
-			// Play when page returns from browser history button
-			window.onpopstate = function() {
-				if ($(document).width() > breakpoint) {
-					$('#herovideo')[0].play();
-				}
-			};
-
-			function loadVideo() {
-				var video = document.getElementById('herovideo');
-
-				// Remove existing source tags for mobile
-				while (video.firstChild) {
-					video.removeChild(video.firstChild);
-				}
-
-				// Add source tags if not already present
-				var source = document.createElement('source');
-
-				if ($(document).width() > breakpoint) {
-					// desktop (over 768px wide)
-					source.setAttribute('src', 'https://img03.en25.com/Web/MackTrucks/{c9af493e-60fe-4c82-b335-c230c4017b3a}_herovideo720.mp4');
-					source.setAttribute('type', 'video/mp4');
-				} else {
-					// mobile (less than 768px wide)
-					source.setAttribute('src', 'https://img03.en25.com/Web/MackTrucks/{082dff24-4128-4a6b-bdfc-6736a0d047ea}_herovideo480.mp4');
-					source.setAttribute('type', 'video/mp4');
-				}
-
-				// Play the video
-				video.appendChild(source);
-				$('#herovideo')[0].play();
-
-			}
-			*/
+			
 
 
 		});
@@ -844,6 +786,12 @@
 			margin-top: 30px;
 		}
 
+		.ui-widget-content .ui-state-active {
+			background-color: #b3986a;
+			border: none;
+
+		}
+
 		.overlay {
 			width: 100%;
 			height: 100%;
@@ -1349,9 +1297,9 @@
 
 	<div id="container">
 	
-		<video autoplay loop class="video" poster="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B0b87518f-ed47-430a-b107-d421ead8e170%7D_Mackonomics_hero_Nov20.jpg" id="herovideo">
-			<source media="(min-width:769px)" type="video/mp4" src="http://images.respond.macktrucks.com/Web/MackTrucks/{c9af493e-60fe-4c82-b335-c230c4017b3a}_herovideo720.mp4">
-			<source type="video/mp4" src="http://images.respond.macktrucks.com/Web/MackTrucks/{082dff24-4128-4a6b-bdfc-6736a0d047ea}_herovideo480.mp4">
+		<video autoplay loop muted class="video" poster="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B0b87518f-ed47-430a-b107-d421ead8e170%7D_Mackonomics_hero_Nov20.jpg" id="herovideo">
+			<source media="(min-width:769px)" type="video/mp4" src="https://img03.en25.com/Web/MackTrucks/{c9af493e-60fe-4c82-b335-c230c4017b3a}_herovideo720.mp4">
+			<source type="video/mp4" src="https://img03.en25.com/Web/MackTrucks/{082dff24-4128-4a6b-bdfc-6736a0d047ea}_herovideo480.mp4">
 		</video>
 
 		<div id="hero">
