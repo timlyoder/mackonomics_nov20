@@ -216,11 +216,11 @@
 
 				if ($(document).width() > breakpoint) {
 					// desktop (over 768px wide)
-					source.setAttribute('src', 'http://images.respond.macktrucks.com/Web/MackTrucks/{c9af493e-60fe-4c82-b335-c230c4017b3a}_herovideo720.mp4');
+					source.setAttribute('src', 'https://img03.en25.com/Web/MackTrucks/{c9af493e-60fe-4c82-b335-c230c4017b3a}_herovideo720.mp4');
 					source.setAttribute('type', 'video/mp4');
 				} else {
 					// mobile (less than 768px wide)
-					source.setAttribute('src', 'http://images.respond.macktrucks.com/Web/MackTrucks/{082dff24-4128-4a6b-bdfc-6736a0d047ea}_herovideo480.mp4');
+					source.setAttribute('src', 'https://img03.en25.com/Web/MackTrucks/{082dff24-4128-4a6b-bdfc-6736a0d047ea}_herovideo480.mp4');
 					source.setAttribute('type', 'video/mp4');
 				}
 
@@ -1348,7 +1348,9 @@
 
 	<div id="container">
 	
-		<video autoplay loop class="video" poster="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B0b87518f-ed47-430a-b107-d421ead8e170%7D_Mackonomics_hero_Nov20.jpg" id="herovideo"></video>
+		<video autoplay loop class="video" poster="http://images.respond.macktrucks.com/EloquaImages/clients/MackTrucks/%7B0b87518f-ed47-430a-b107-d421ead8e170%7D_Mackonomics_hero_Nov20.jpg" id="herovideo">
+			<source src="https://img03.en25.com/Web/MackTrucks/{c9af493e-60fe-4c82-b335-c230c4017b3a}_herovideo720.mp4" type="video/mp4">
+			</video>
 
 		<div id="hero">
 
