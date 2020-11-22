@@ -173,6 +173,9 @@
 				window.location.href = $(this).attr("href");
 			});
       
+			
+			// typeahead
+
             var companies = new Bloodhound({
                 datumTokenizer: Bloodhound.tokenizers.whitespace,
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -185,6 +188,42 @@
                 name: 'companies',
                 source: companies
             });
+
+			$(".sidebar form").on("submit", function(e) {
+    			e.preventDefault();
+				console.log("submit");
+				console.log($(this).serialize());
+				$.ajax( {
+					type:"POST",
+					url:"https://s1219509997.t.eloqua.com/e/f2",
+					data: $(".sidebar form").serialize(),
+					success:function(e) {
+						console.log($(".sidebar form").serialize()),
+						window.location="https://info.macktrucks.com/incentivesThankYou?program="+$(".sidebar input.programName").val()
+					},
+					error:function(e) {
+						console.log("error", e)
+					}
+				})
+			});
+
+
+			$('form').on('submit', function(e){
+				e.preventDefault();
+					$.ajax({
+					type: "POST",
+					url:"https://s1219509997.t.eloqua.com/e/f2",
+					data:$(this).serialize(),
+					success: function(data){
+						formSubmitted()
+						console.log('success');
+					},
+					error: function(data){
+						console.log('error', data)
+					}
+				})
+			});	
+
 
 		});
 
